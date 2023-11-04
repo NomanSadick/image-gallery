@@ -1,79 +1,8 @@
 .image-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 25px;
-  grid-auto-flow: dense;
+  justify-content: center;
   padding-bottom: 30px;
-  justify-content: center;
-  /* Center the grid horizontally */
-}
-
-.image-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  border: 2px solid #ccc;
-  padding: 10px;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-/* Add styles for the overlay */
-.image-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  /* Overlay background color with opacity */
-  opacity: 0;
-  /* Initially hidden */
-  transition: opacity 0.2s;
-  /* Add a smooth transition for the overlay */
-}
-
-.image-item:hover::before {
-  opacity: 1;
-}
-
-.image-content {
-  padding: 30px;
-}
-
-.image-content img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-.image-item input[type="checkbox"] {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.image-item:hover input[type="checkbox"] {
-  opacity: 1;
-  pointer-events: all;
-  background-color: aqua;
-  transform: translate(15px, 15px) scale(2);
-  /* Adjust the position and size */
-}
-
-.image-item input[type="checkbox"]:checked {
-  opacity: 1;
-  pointer-events: all;
-  background-color: aqua;
-  transform: translate(15px, 15px) scale(2);
-}
-
-
-.first-image {
-  width: 300px;
-  height: 300px;
+  /* Add other styles as needed */
 }

@@ -1,16 +1,22 @@
 import React from 'react';
+import './ImageItem.css';
 
-const ImageItem = ({ image, index, onReorder, onDelete, onSetFeature, selected, onSelect }) => {
+const ImageItem = ({ image, index, onReorder, selected, onSelect, images, setImages }) => {
   const imageUrl = image.url;
 
   const handleImageSelect = () => {
     onSelect(index);
+    const updatedImages = images.map((img, i) => ({
+      ...img,
+      featured: i === index,
+    }));
+    setImages(updatedImages);
   };
 
   return (
     <div
       key={index}
-      className={`image-item ${image.featured ? 'featured' : ''} ${selected ? 'selected' : ''}`}
+      className={`image-item ${image.featured ? 'featured' : ''} ${selected ? 'selected' : ''} ${index === 0 ? 'first-image' : ''}`}
       draggable
       onDragStart={(e) => e.dataTransfer.setData('index', index)}
       onDragOver={(e) => e.preventDefault()}
@@ -20,6 +26,7 @@ const ImageItem = ({ image, index, onReorder, onDelete, onSetFeature, selected, 
         onReorder(fromIndex, toIndex);
       }
       }
+      onClick={handleImageSelect}
     >
       <input type="checkbox" checked={selected} onChange={handleImageSelect} />
       <div className="image-content">
@@ -30,4 +37,3 @@ const ImageItem = ({ image, index, onReorder, onDelete, onSetFeature, selected, 
 };
 
 export default ImageItem;
-
