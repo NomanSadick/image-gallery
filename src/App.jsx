@@ -101,13 +101,11 @@ function App() {
             "Gallery"
           )}
         </div>
-        <div>
+        <div className="delete-container">
           {selectedImageIndices.length > 0 && (
-            <div className="delete-container">
-              <div className="delete-text delete-text--top-right" onClick={handleDeleteAll}>
+              <div className="delete-text" onClick={handleDeleteAll}>
                 Delete Files
               </div>
-            </div>
           )}
         </div>
       </div>
