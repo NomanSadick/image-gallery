@@ -4,8 +4,7 @@
   margin: 20px auto;
   background-color: white;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
-  /* box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 8px; */
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 8px 0px, rgba(0, 0, 0, 0.06) 1px 0px 8px 0px;
 }
 
 .container {
@@ -46,4 +45,6 @@
   transform: scale(1.5); 
   margin-right: 5px;
 }
+
+
 

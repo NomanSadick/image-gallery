@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import ImageGallery from "./components/ImageGallery/ImageGallery";
 
-
 import image1 from "./assets/images/image-1.webp";
 import image2 from "./assets/images/image-2.webp";
 import image3 from "./assets/images/image-3.webp";
