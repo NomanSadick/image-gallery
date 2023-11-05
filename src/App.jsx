@@ -16,7 +16,7 @@ import image11 from "./assets/images/image-11.jpeg";
 
 function App() {
   const [images, setImages] = useState([
-    { url: image1, featured: true },
+    { url: image11, featured: true },
     { url: image2 },
     { url: image3 },
     { url: image4 },
@@ -26,11 +26,12 @@ function App() {
     { url: image8 },
     { url: image9 },
     { url: image10 },
-    { url: image11 }
+    { url: image1 }
   ]);
 
   const [selectedImageIndices, setSelectedImageIndices] = useState([]);
   const [showCheckbox, setShowCheckbox] = useState(false);
+  
 
   const handleReorder = (fromIndex, toIndex) => {
     const updatedImages = [...images];

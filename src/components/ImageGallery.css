@@ -4,5 +4,11 @@
   grid-gap: 25px;
   justify-content: center;
   padding-bottom: 30px;
-  /* Add other styles as needed */
+}
+
+@media screen and (max-width: 576px) {
+  .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
 }

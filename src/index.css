@@ -6,7 +6,6 @@
   margin: 20px auto;
   background-color: white;
   border-radius: 10px;
-  /* Add a border radius to the whole page */
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
@@ -21,8 +20,6 @@
   font-weight: bold;
 }
 
-
-
 .delete-container {
   font-size: 20px;
   font-weight: bold;
@@ -34,7 +31,6 @@
   margin-bottom: 20px;
 }
 
-/* Add any additional styling as necessary */
 .checkbox-container {
   display: flex;
   align-items: center;
@@ -43,8 +39,7 @@
 }
 
 .checkbox-container input[type="checkbox"] {
-  /* Define the size and scale for the checkbox */
-  transform: scale(1.5); /* Adjust the scale factor as needed */
-  margin-right: 5px; /* Add spacing between checkbox and text */
+  transform: scale(1.5); 
+  margin-right: 5px;
 }
 
