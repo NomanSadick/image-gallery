@@ -1,6 +1,6 @@
 import React from 'react';
 import './ImageGallery.css';
-import ImageItem from './ImageItem';
+import ImageItem from '../ImageItem/ImageItem';
 
 const ImageGallery = ({ images, onReorder, onSetFeature, selectedImageIndices, toggleImageSelection }) => {
 

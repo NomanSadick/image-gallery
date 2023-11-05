@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ImageGallery from "./components/ImageGallery";
+import ImageGallery from "./components/ImageGallery/ImageGallery";
 
 
 import image1 from "./assets/images/image-1.webp";
@@ -31,7 +31,7 @@ function App() {
 
   const [selectedImageIndices, setSelectedImageIndices] = useState([]);
   const [showCheckbox, setShowCheckbox] = useState(false);
-  
+
 
   const handleReorder = (fromIndex, toIndex) => {
     const updatedImages = [...images];
@@ -103,9 +103,9 @@ function App() {
         </div>
         <div className="delete-container">
           {selectedImageIndices.length > 0 && (
-              <div className="delete-text" onClick={handleDeleteAll}>
-                Delete Files
-              </div>
+            <div className="delete-text" onClick={handleDeleteAll}>
+              Delete Files
+            </div>
           )}
         </div>
       </div>
